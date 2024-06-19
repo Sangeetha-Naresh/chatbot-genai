@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>GEN-AI-chatbot</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</head>
+
+<body>
+        
+    <div
+        style="color: #FFF; background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%),url(./static/assets/bg/bg-emoji.png); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+
+        <!--Chatbot UI-->
+        <div class="chatbox">
+            <!--Chatbot Chat-->
+            <div class="chatbox__chat">
+
+                <!--Chatbot Header-->
+                <div class="row chatbox__header">
+                    <div class="col-2 chatbox__image__header">
+                        <img class="chatbox__image" src="./static/assets/chaticons/chatbot-icon.png"  width="55" height="47" alt="image">
+                    </div>
+                    <div class="col-10 chatbox__content__header">                        
+                        <p class="chatbox__description">Hi. My name is GENAI-Chatbot. How can I help you?</p>
+                    </div>
+                </div>
+
+                <!--Chatbot Messages-->
+                <div class="row chatbox__messages__cotainer">
+                    <div class="col" id="chat_messages">
+                        <div class="user__messages">
+                            Hi!
+                            <!--User Message gets appended here-->
+                        </div>
+                        <div class="bot__messages">
+                            Hi!
+                            <!--Bot Message gets appended here-->
+                        </div>
+                    </div>
+                </div>
+                
+
+                <!--Chatbot Footer-->
+                <div class="row chatbox__footer">
+                    <div class="col-9 text-left chatbox__input">
+                        <input type="text" class="form-control" id="bot_input_text"
+                            placeholder="Type your message here...">
+                    </div>
+                    <div class="col-3 text-left chatbox__send__button">
+                        <button class="btn" id="send_button">Send</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--Chatbot Button-->
+            <div class="chatbox__button">
+                <button id="open_button"></button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
